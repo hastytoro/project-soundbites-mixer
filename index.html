@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
     <link
@@ -16,7 +16,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./style.css" />
-    <title>Beatmixer 🎵 🎧 🎭 🎶</title>
+    <title>Soundbites (mixer) 🎵 🎧 🎭 🎶</title>
   </head>
   <body>
     <div class="wrapper">
@@ -25,7 +25,7 @@
         <div class="controls">
           <h1>Kick</h1>
           <button data-track="0" class="mute kick-volume">
-            <i class="fa-solid fa-volume-xmark"></i>
+            <i class="fa-solid fa-music"></i>
           </button>
           <div class="select-container">
             <select name="kick-select" id="kick-select">
@@ -54,7 +54,7 @@
         <div class="controls">
           <h1>Snare</h1>
           <button data-track="1" class="mute snare-volume">
-            <i class="fa-solid fa-volume-xmark"></i>
+            <i class="fa-solid fa-music"></i>
           </button>
           <div class="select-container">
             <select name="snare-select" id="snare-select">
@@ -84,8 +84,8 @@
       <div class="hihat-track">
         <div class="controls">
           <h1>Hihat</h1>
-          <button data-track="1" class="mute hihat-volume">
-            <i class="fa-solid fa-volume-xmark"></i>
+          <button data-track="2" class="mute hihat-volume">
+            <i class="fa-solid fa-music"></i>
           </button>
           <div class="select-container">
             <select name="hihat-select" id="hihat-select">
@@ -110,8 +110,18 @@
           <div class="pad hihat-pad b7"></div>
         </div>
       </div>
+      <div class="tempo">
+        <p>Tempo: <span class="tempo-nr">150</span></p>
+        <input
+          class="tempo-slider"
+          type="range"
+          max="300"
+          min="20"
+          value="150"
+        />
+        <button class="play">Play</button>
+      </div>
     </div>
-    <button class="play">Play</button>
     <audio class="kick-audio" src="./media/kick-classic.wav"></audio>
     <audio class="snare-audio" src="./media/snare-acoustic01.wav"></audio>
     <audio class="hihat-audio" src="./media/hihat-acoustic01.wav"></audio>

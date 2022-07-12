@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto Mono", monospace;
   background-image: linear-gradient(120deg, #f9f9f9 0%, #d8d8d8 100%);
 }
 
@@ -107,21 +107,23 @@ svg {
 }
 
 .play {
+  font-family: "Roboto Mono", monospace;
   padding: 1rem 2rem;
   border: none;
   border-radius: 5px;
   font-size: 1.5rem;
   background: rgb(88, 88, 88);
   color: white;
-  position: absolute;
+  /* position: absolute;
   top: 10%;
-  right: 10%;
+  right: 10%; */
   cursor: pointer;
   transition: all 0.2s ease;
 }
 .play.active {
   background: rgba(255, 0, 0, 0.5);
-  transform: scale(1.1);
+  font-weight: bold;
+  transform: scale(1.2);
 }
 
 .select-container {
@@ -131,7 +133,7 @@ svg {
 }
 
 select {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto Mono", monospace;
   background: rgb(88, 88, 88);
   color: white;
   padding: 1rem;
@@ -142,11 +144,33 @@ select {
 }
 
 .select-btn {
-  margin-top: 3px;
+  margin-top: 1px;
   position: absolute;
   top: 0;
   right: 0;
   align-items: center;
   pointer-events: none;
   transition: all 0.3s ease;
+}
+
+.mute.active {
+  background: rgb(182, 182, 182);
+}
+
+.tempo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3rem;
+  width: 50%;
+}
+.tempo-slider {
+  padding: 0.2rem;
+  appearance: none;
+  margin: 1rem 0rem;
+  width: 40%;
+  position: relative;
+  background: rgb(88, 88, 88);
+  cursor: pointer;
+  border-radius: 1rem;
 }
